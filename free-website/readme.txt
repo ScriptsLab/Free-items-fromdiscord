@@ -1,0 +1,1 @@
+Strona jest typu one file nie ma js i css są one uwzględnione przez <style> i <script>

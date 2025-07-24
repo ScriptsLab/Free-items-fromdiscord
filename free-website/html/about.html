@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime scripts free site 1# about</title>
+</head>
+<body style="background-color: gray;">
+    
+
+    <style>
+       
+
+     .menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 35px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-toggle div {
+      background-color: #fff;
+      height: 4px;
+      margin: 6px 0;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background-color: #1a1a1a;
+      padding-top: 80px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      transition: 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav a {
+      display: block;
+      padding: 15px 30px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      color: #00d0ff;
+    }
+
+    nav.open {
+      left: 0;
+    }
+
+   /* Menu Toggle */
+    .menu-toggle.open div:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 6px);
+    }
+
+    .menu-toggle.open div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open div:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+    </style>
+
+
+     <div class="menu-toggle" id="menu-toggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="side-menu">
+    <a href="main.html">Strona główna</a>
+    <a href="faq.html">Faq</a>
+    <a href="contact.html">Kontakt</a>
+    </nav>
+
+<div>
+    <h3 style="margin-left: 650px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px;">O nas</h3>
+    <h3 style="margin-left: 500px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px;";">bla bla blabla bla blabla 
+        bla blabla bla blabla <br> bla blabla bla blabla bla bla</h3>
+
+
+</div>
+
+
+
+ <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("side-menu");
+
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("open");
+      menu.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

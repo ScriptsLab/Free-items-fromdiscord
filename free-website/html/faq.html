@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main site</title>
+   
+
+    <style>
+     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 35px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-toggle div {
+      background-color: #fff;
+      height: 4px;
+      margin: 6px 0;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background-color: #1a1a1a;
+      padding-top: 80px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      transition: 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav a {
+      display: block;
+      padding: 15px 30px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      color: #00d0ff;
+    }
+
+    nav.open {
+      left: 0;
+    }
+
+    /* Hamburger animation */
+    .menu-toggle.open div:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 6px);
+    }
+
+    .menu-toggle.open div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open div:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="side-menu">
+    <a href="main.html">Main site</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="about.html">O nas</a>
+    </nav>
+
+
+
+    <div>
+
+        <h1 style="margin-left: 700px;">FAQ dla firmy</h1>
+
+    </div>
+
+    <style>
+
+        .boxfaq{
+            width: 40%;
+            height: auto;
+            background-color: rgb(48, 47, 47);
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;   
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+            text-align: center;
+            line-height: 2em;
+            border-radius: 15px;
+            margin-left: 460px;
+            text-align: center;
+        }
+    </style>
+    <div>
+        <div class="boxfaq">Od ilu lat jesteście na rynku?</div>
+        <div class="boxfaq">Od 4 lat.</div> <br><br>
+        <div class="boxfaq">Jakie są główne usługi jakie oferujecie?</div><br><br>
+        <div class="boxfaq">Oferty to: <br>
+
+            Wymiana silnika <br>
+            Wymiana kierownicy <br>
+            Wymiana koła przedniego <br>
+            Wymiana koła tylnego <br>
+            
+        </div><br><br>
+        
+            
+        <div class="boxfaq">Ile kosztuje naprawa silnika?</div><br><br>
+        <div class="boxfaq">To zależy od uszkodzeń prosze pana/i</div>
+
+    </div>
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("side-menu");
+
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("open");
+      menu.classList.toggle("open");
+    });
+  </script>
+    
+</body>
+</html>
